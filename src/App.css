@@ -1,0 +1,49 @@
+
+.fila{
+  display: flex;
+  flex-direction: row;
+}
+.column-b{
+  display: flex;
+  flex-direction: column;
+  flex: 25%;
+}
+
+.bar_nav > a{
+  text-decoration: none;
+}
+
+.firma{
+text-align: center;
+align-content: center;
+width: auto;
+margin:10px;
+height: 150px;
+border-radius: 15px;
+border: 2px solid blue;
+font-size: 8pt;
+}
+.firma > img{
+  width: 150px;
+}
+.column-b > div{
+  margin-bottom: auto;
+}
+.btn{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+button{
+
+  color: black;
+  border: none;
+  border-radius: 10px;
+  width: 100px;
+  height: 30px;
+  border: 2px solid blue;
+}
+button:hover{
+ background-color: blue;
+ color: white;
+}
