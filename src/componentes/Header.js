@@ -1,9 +1,9 @@
 function Header(){
     return (
         <div className="encabezado">
-            <img src="/images/escudo.jpg" />
+            <img src="/images/escudo.jpg" alt="logo"/>
             <div>
-            <p>Christian Jeovany Santos Baltazar</p>
+            <p>Alejandro López Valdez</p>
             <p>Código: 998234567</p>
             </div>
         </div>

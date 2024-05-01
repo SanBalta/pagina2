@@ -19,7 +19,7 @@ function PDFUno(){
     <Document>
         <Page style={styles.page}>
             <Text>Atención docente de grupo:</Text>
-            <Text>Oficio No. 253/F87</Text>
+            <Text>Oficio No. 253/F88/2024</Text>
             <Text>{`\n`}</Text>
             <Text>
             Estimados Padres y Tutores,
