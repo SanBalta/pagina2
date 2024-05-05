@@ -38,10 +38,9 @@ const [show, setShow]=useState(false)
 
             <div className='btn'>
               <button onClick={()=>setShow(true)}>Firmar</button>
-              <button>Enviar correo</button>
               <PDFDownloadLink document={<FirmaPDF/>} fileName='Oficio.pdf'>
                 {
-                  ({loading})=>loading? <button>
+                  ({loading})=>loading?<button>
                     Cargando Documento...
                   </button>:<button>
                     Descargar
