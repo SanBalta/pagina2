@@ -47,3 +47,71 @@ button:hover{
  background-color: blue;
  color: white;
 }
+.bienvenido{
+  font-size: 30pt;
+  margin: 0;
+  padding: 0;
+  color: white;
+  font-weight: bold;
+  font-family: 'Lucida Grande';
+}
+img{
+    width: 2cm;
+    margin: 5px 0 5px 0;
+    border-radius: 15px;
+}
+.container1{
+    display: flex;
+    flex-direction:row-reverse;
+    justify-content:space-between;
+    font-size: 15pt;
+    font-family: Arial;
+    background-color:#0000CD;
+    color: white;
+    padding: 10px 30px 10px 30px;
+}
+.login{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+
+}
+.login form{
+  background-color:#4682B4;
+  width: 400px;
+  border-radius: 25px;
+  margin:50px auto;
+}
+.login div{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 30px;
+
+} 
+.email label{
+  text-align: center;
+  color: white;
+  margin: 10px;
+  padding: 5px;
+}
+.pass label{
+  text-align: center;
+  color: white;
+  margin: 10px;
+  padding: 5px;
+}
+button{
+  border-radius: 15px;
+  width: 100px;
+  height: 30px;
+  margin: 10px;
+  border: none;
+  background-color: #B0E0E6;
+
+}
+button:hover {
+  transform:scale(1.1);
+}

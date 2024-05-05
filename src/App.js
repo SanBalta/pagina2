@@ -1,11 +1,15 @@
 import './App.css';
 import Header from './componentes/Header';
 import PDFUno from './componentes/PDFUno';
-import PDFDos from './componentes/PDFDos';
 import Sidebar from './componentes/Sidebar';
 import { PDFViewer } from '@react-pdf/renderer';
+import React,{ useState } from 'react';
+import { PDFDownloadLink } from '@react-pdf/renderer';
+import FirmaPDF from './componentes/FirmaPDF';
+
 
 function App() {
+const [show, setShow]=useState(false)
   return (
     <div>
         <Header/>
@@ -26,13 +30,25 @@ function App() {
             </div>
 
             <div className='firma'>
-              <img src="/images/firma.png" alt='firma digital'/>
+              {
+              show?<img src="/images/firma.png" alt='firma digital'/>:null
+              }
               <p>Alejandro López Valdez</p>
             </div>
 
             <div className='btn'>
-              <button>Firmar</button>
+              <button onClick={()=>setShow(true)}>Firmar</button>
               <button>Enviar correo</button>
+              <PDFDownloadLink document={<FirmaPDF/>} fileName='Oficio.pdf'>
+                {
+                  ({loading})=>loading? <button>
+                    Cargando Documento...
+                  </button>:<button>
+                    Descargar
+                  </button>
+                }
+              </PDFDownloadLink>
+
             </div>
 
           </div>

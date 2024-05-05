@@ -1,9 +1,4 @@
-import {
-    Document,
-    Text,
-    Page,
-    StyleSheet
-} from '@react-pdf/renderer';
+import {Document,Text,Page,StyleSheet, View, Image} from '@react-pdf/renderer';
 
 const styles = StyleSheet.create({
     page:{
@@ -11,19 +6,57 @@ const styles = StyleSheet.create({
         padding:25,
         fontSize:14,
         lineHeight:1.5
+    },
+    image1:{
+        width:80,
+        marginLeft:50,
+    },
+    image2:{
+        width:80,
+        marginLeft:50,
+    },
+    autor:{
+        marginLeft:25
+    },
+    firma:{
+        marginLeft:40
+    },
+    titulo:{
+        display:"flex",
+        flexDirection:"row",
+        justifyContent:"space-around"
     }
+
 })
 
-function PDFDos(){
+
+
+function FirmaPDF(){
+
     return(
     <Document>
         <Page style={styles.page}>
+            <View style={styles.titulo}>
+                <View>
+                <Text style={styles.firma}>Firma del docente</Text>
+                <Text>{`\n`}</Text>
+                <Image style={styles.image1}  src='/images/firma.png'/>
+                <Text>__________________________</Text>
+                <Text style={styles.autor}>Alejandro López Valdez</Text>
+                <Text>{`\n\n`}</Text>
+                </View>
+                <View>
+                <Image style={styles.image2}  src='/images/escudo.jpg'/>
+                </View>
+            </View>
+
+            <View>
+
             <Text>Atención docente de grupo:</Text>
-            <Text>Oficio No. 253/F88</Text>
+            <Text>Oficio No. 253/F88/2024</Text>
             <Text>{`\n`}</Text>
             <Text>
             Estimados Padres y Tutores,
-
             Espero que este mensaje les encuentre a ustedes y a sus seres queridos
             en buena salud y en buen ánimo. Con el fin de mantenerlos informados 
             sobre los acontecimientos importantes en nuestra escuela, me dirijo a 
@@ -56,16 +89,14 @@ function PDFDos(){
             viaje educativo. Una vez más, les agradezco su colaboración y confianza en nuestra 
             escuela. Juntos, seguiremos trabajando para brindar la mejor educación posible a nuestros 
             estudiantes.
-            
             </Text> 
-            <Text>{`\n\n\n`}</Text>
-            <Text>Firma del docente</Text>
-            <Text>{`\n\n`}</Text>
-            <Text>Armando Reyes Reyes</Text>
-            <Text>__________________________</Text>
+            </View>
         </Page>
+
+
     </Document>
+
     )
 }
 
-export default PDFDos;
+export default FirmaPDF;

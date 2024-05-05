@@ -1,4 +1,5 @@
-function inicioSesion(){
+function Principal(){
+
     return (
         <body class="App-body">
         <header>
@@ -9,9 +10,9 @@ function inicioSesion(){
         </header>    
         <main>
           <div class="login">    
-            <form>
+            <form action="">
               <div class="mensaje">
-                <p>Bienvenido</p>
+                <p className="bienvenido">Bienvenido</p>
               </div>
 
               <div class="email">
@@ -34,4 +35,4 @@ function inicioSesion(){
 
   );
 }
-export default inicioSesion;
+export default Principal;
